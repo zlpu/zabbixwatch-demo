@@ -98,7 +98,7 @@ ZabbixWatch 是一个基于 **VUE3 + Python + Flask + MySQL** 开发的 Zabbix �
 | Nginx | 8088 | 反向代理端口 |
 
 
-## 🚀 部署前准备
+## 🚀 docker部署
 ### 🔍 1. 环境检查
 
 ```bash
@@ -111,7 +111,7 @@ docker-compose --version
 
 ```bash
 # 下载部署包
-wget https://releases.example.com/zabbixwatch/latest.tar.gz
+zabbixwatch-images-latest.tar.gz
 
 # 解压部署包
 tar -zxvf zabbixwatch-images-latest.tar.gz
@@ -135,7 +135,7 @@ ZabbixWatch与Zabbix监控系统深度集成，通过标准API接口获取监控
 
 #### 📂 1. 主机组配置（必须）
 确保Zabbix中已创建以下主机组，系统将自动识别并统计各组主机数量：
-
+![zabbix主机组设置](./项目介绍截图/zabbix主机组设置.jpg)
 | 主机组名称（必须） | 建议主机类型 |
 |-----------|-------------|
 | Linux组 | CentOS、Ubuntu、RHEL等 |
@@ -152,7 +152,7 @@ ZabbixWatch与Zabbix监控系统深度集成，通过标准API接口获取监控
 #### ⚙️ 2. 监控项描述配置（必须）
 
 确保监控项描述与系统要求一致，系统通过描述字段匹配监控数据：
-
+![zabbix监控项描述](./项目介绍截图/zabbix配置监控项描述.jpg)
 | 监控指标（无需修改） | 监控项描述（需修改） | 数据累加说明 |
 |---|---|---|
 | CPU使用率相关监控项 | cpu使用率 | 多核CPU时会累加所有核心使用率 |
