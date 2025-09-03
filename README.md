@@ -144,7 +144,7 @@ ZabbixWatch与Zabbix监控系统深度集成，通过标准API接口获取监控
 | Windows组 | Windows Server系列 |
 | 数通设备组 | 支持SNMP的网络设备 |
 | 数据库组 | MySQL、Oracle、SQL Server等 |
-| Web服务器 | Apache、Nginx、IIS等 |
+| Web组 | Apache、Nginx、IIS等 |
 | JMX组 | Tomcat、WebLogic等 |
 | 硬件服务器组 | 支持SNMP的硬件服务器 |
 | 其他组 | 其他主机 |
@@ -157,7 +157,7 @@ ZabbixWatch与Zabbix监控系统深度集成，通过标准API接口获取监控
 ![zabbix监控项描述](./项目介绍截图/zabbix配置监控项描述.jpg)
 | 监控指标（无需修改） | 监控项描述（需修改） | 数据累加说明 |
 |---|---|---|
-| CPU使用率相关监控项 | cpu使用率 | 多核CPU时会累加所有核心使用率 |
+| CPU使用率相关监控项 | CPU使用率 | 多核CPU时会累加所有核心使用率 |
 | 内存使用率相关监控项 | 内存使用率 | 多内存条时会累加总使用率 |
 | 磁盘使用率相关监控项 | /:磁盘使用率<br>C:磁盘使用率 | 优先匹配/:磁盘使用率，无数据时尝试C:磁盘使用率 |
 | 网络接收流量相关监控项 | 接收流量 | 多网卡时会累加所有网卡接收流量 |
