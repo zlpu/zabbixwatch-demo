@@ -1,0 +1,106 @@
+version: '3.8'
+
+services:
+  # Nginx 反向代理服务
+  nginx:
+    image: registry.cn-chengdu.aliyuncs.com/pzl_devops/nginx:alpine
+    container_name: zabbixwatch-nginx
+    ports:
+      - "8088:80"
+      - "443:443"
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./logs/nginx:/var/log/nginx
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    depends_on:
+      - zabbixwatch-web
+      - zabbixwatch-api
+    restart: unless-stopped
+    networks:
+      - zabbix-network
+
+  # 前端Web服务
+  zabbixwatch-web:
+    image: registry.cn-chengdu.aliyuncs.com/pzl_devops/zabbix-watch-web:v2.0
+    container_name: zabbixwatch-web
+    expose:
+      - "80"
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    restart: unless-stopped
+    networks:
+      - zabbix-network
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # 后端API服务
+  zabbixwatch-api:
+    image: registry.cn-chengdu.aliyuncs.com/pzl_devops/zabbix-watch-api-en:v2.0
+    container_name: zabbixwatch-api
+    expose:
+      - "5000"
+    environment:
+      - TZ=Asia/Shanghai
+      - DB_HOST=mysql
+      - DB_PORT=3306
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    depends_on:
+      mysql:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/api/health', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - zabbix-network
+
+  # MySQL 数据库服务 - 使用自定义数据库镜像
+  # 镜像已内置数据库、用户和配置，开箱即用
+  mysql:
+    image: registry.cn-chengdu.aliyuncs.com/pzl_devops/zabbixwatch-db:v2.0
+    container_name: zabbixwatch-db
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./logs/mysql:/var/log/mysql
+    ports:
+      - "3366:3306"
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost --silent || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - zabbix-network
+
+networks:
+  zabbix-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/16
+
+volumes:
+  mysql_data:
+    driver: local
