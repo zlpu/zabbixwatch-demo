@@ -15,7 +15,7 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
       - ./logs/nginx:/var/log/nginx
       - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
+      # - /etc/timezone:/etc/timezone:ro
     depends_on:
       - zabbixwatch-web
       - zabbixwatch-api
@@ -33,7 +33,7 @@ services:
       - TZ=Asia/Shanghai
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
+      # - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
     networks:
       - zabbix-network
@@ -58,7 +58,7 @@ services:
       - ./logs:/app/logs
       - ./data:/app/data
       - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
+      # - /etc/timezone:/etc/timezone:ro
     depends_on:
       mysql:
         condition: service_healthy
