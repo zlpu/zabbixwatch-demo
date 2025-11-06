@@ -508,6 +508,17 @@ docker-compose down
 # 停止并删除容器和数据卷
 docker-compose down -v
 ```
+#### 6. 如需删除后重新部署
+
+```bash
+cd Install-zabbixwatch/docker-compose
+
+# 停止并删除容器和数据卷
+docker-compose down -v
+
+# 启动所有服务
+docker-compose up -d
+```
 
 <br>
 
