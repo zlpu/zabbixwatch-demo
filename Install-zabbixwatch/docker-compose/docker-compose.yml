@@ -7,7 +7,7 @@ services:
     container_name: zabbixwatch-nginx
     ports:
       - "8088:80"
-      - "443:443"
+      #- "443:443"
     environment:
       - TZ=Asia/Shanghai
     volumes:
@@ -25,7 +25,7 @@ services:
 
   # 前端Web服务
   zabbixwatch-web:
-    image: registry.cn-chengdu.aliyuncs.com/pzl_devops/zabbix-watch-web:v2.0
+    image: registry.cn-chengdu.aliyuncs.com/pzl_devops/zabbix-watch-web:v2.1
     container_name: zabbixwatch-web
     expose:
       - "80"
@@ -46,7 +46,7 @@ services:
 
   # 后端API服务
   zabbixwatch-api:
-    image: registry.cn-chengdu.aliyuncs.com/pzl_devops/zabbix-watch-api-en:v2.0
+    image: registry.cn-chengdu.aliyuncs.com/pzl_devops/zabbix-watch-api-en:v2.1
     container_name: zabbixwatch-api
     expose:
       - "5000"
@@ -73,9 +73,8 @@ services:
       - zabbix-network
 
   # MySQL 数据库服务 - 使用自定义数据库镜像
-  # 镜像已内置数据库、用户和配置，开箱即用
   mysql:
-    image: registry.cn-chengdu.aliyuncs.com/pzl_devops/zabbixwatch-db:v2.0
+    image: registry.cn-chengdu.aliyuncs.com/pzl_devops/zabbixwatch-db:v2.1
     container_name: zabbixwatch-db
     environment:
       - TZ=Asia/Shanghai
