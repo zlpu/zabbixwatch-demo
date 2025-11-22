@@ -78,12 +78,12 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <tr>
 <td width="33%" valign="top">
 
-### 📦 v2.0 (2025-11-04)
+### 📦 v2.2 (2025-11-22)
 
 **🎉 重大更新**
 - ⚡️ **零配置接入** - 直接接入 Zabbix，无需修改
 - 🎨 **自定义大屏** - 拖拽式编辑器
-- 🔗 **多数据源** - 支持多个 Zabbix
+- 🔗 **多数据源** - 支持多个 Zabbix(5-7)
 - 🤖 **AI 增强** - 内置硅基流动、DeepSeek
 - 📊 **大屏优化** - 流量 TOP10、多网卡/磁盘显示
 - 🏗 **架构重构** - 模块化设计
@@ -423,7 +423,7 @@ Zabbix URL: http://your-zabbix-server
 ### 环境要求
 
 - Docker + Docker Compose 
-- Zabbix Server 6.0+
+- Zabbix Server 5.0+
 
 #### 网络端口
 
@@ -536,7 +536,7 @@ A: 请检查以下几点：
 1. Zabbix URL 是否正确（不需要包含 `/api_jsonrpc.php`）
 2. Zabbix 用户名和密码是否正确
 3. 网络是否连通（可以在容器内 ping Zabbix 服务器）
-4. Zabbix API 版本是否兼容（支持 6.0+）
+4. Zabbix API 版本是否兼容（支持 5.0+）
 
 
 
