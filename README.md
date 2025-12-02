@@ -4,7 +4,7 @@
 # 🎯 ZabbixWatch
 <h3> Zabbix 可视化监控大屏系统</h3>
 
-[![Version](https://img.shields.io/badge/版本-v2.0-blue.svg?style=for-the-badge)](https://github.com/zlpu/zabbixwatch-demo/releases) [![Python](https://img.shields.io/badge/Python-3.11-green.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/) [![Vue](https://img.shields.io/badge/Vue-3.x-brightgreen.svg?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/) [![Docker](https://img.shields.io/badge/Docker-就绪-blue.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Version](https://img.shields.io/badge/版本-v3.0-blue.svg?style=for-the-badge)](https://github.com/zlpu/zabbixwatch-demo/releases) [![Python](https://img.shields.io/badge/Python-3.11-green.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/) [![Vue](https://img.shields.io/badge/Vue-3.x-brightgreen.svg?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/) [![Docker](https://img.shields.io/badge/Docker-就绪-blue.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 
 <p align="center">
   <b>🎨 实时监控</b> · <b>🛠 自定义大屏</b> · <b>🤖 AI 智能分析</b>
@@ -66,7 +66,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 
 <div>
 
-### 🚀 从 v1.0 到 v2.0 的演进
+### 🚀 从 v1.0 到 v3.0 的演进
 
 <sub>持续迭代 · 不断优化 · 追求卓越</sub>
 
@@ -76,28 +76,42 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td width="25%" valign="top">
+
+### 📦 v3.0 (2025-12-02)
+
+**🎉 重大更新**
+- 🗺️ **地图告警** - 大屏新增地图样式告警展示
+- 🏷️ **可见名称** - 全面支持 Zabbix 主机可见名称
+- 🚀 **流程优化** - 取消数据初始化页面，解决认证失败
+- 💾 **规则持久化** - 告警规则配置持久化存储
+- 📅 **时间筛选** - 告警信息支持时间范围查询
+- 🔍 **状态判断** - 在线/离线增加双重判断标准
+- 💿 **磁盘显示** - 修复磁盘使用率显示问题
+
+</td>
+<td width="25%" valign="top">
 
 ### 📦 v2.0 (2025-11-04)
 
 **🎉 重大更新**
-- ⚡️ **零配置接入** - 直接接入 Zabbix，无需修改
+- ⚡️ **零配置接入** - 直接接入 Zabbix
 - 🎨 **自定义大屏** - 拖拽式编辑器
 - 🔗 **多数据源** - 支持多个 Zabbix
-- 🤖 **AI 增强** - 内置硅基流动、DeepSeek
-- 📊 **大屏优化** - 流量 TOP10、多网卡/磁盘显示
+- 🤖 **AI 增强** - 内置大模型
+- 📊 **大屏优化** - 流量 TOP10
 - 🏗 **架构重构** - 模块化设计
 
 </td>
-<td width="33%" valign="top">
+<td width="25%" valign="top">
 
 ### 📦 v1.1 (2025-09-14)
 
 **💚 功能增强**
-- ✅ 扩展 Zabbix 版本支持（5.x/6.x/7.x）
+- ✅ 扩展 Zabbix 版本支持
 - ✅ 自定义资产组显示
 - ✅ 自定义时间段查询
-- ✅ 简化 Zabbix 配置要求
+- ✅ 简化 Zabbix 配置
 - ✅ Docker Compose 部署
 
 **改进说明**
@@ -105,7 +119,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 - 不再需要调整主机群组
 
 </td>
-<td width="33%" valign="top">
+<td width="25%" valign="top">
 
 ### 📦 v1.0 (2025-08-29)
 
@@ -119,7 +133,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 
 **限制说明**
 - 仅支持 Zabbix 7.x
-- 需配置主机群组和描述字段
+- 需配置主机群组
 
 </td>
 </tr>
@@ -137,11 +151,12 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <table>
 <thead>
 <tr style="background-color: #f6f8fa;">
-<th width="18%">功能特性</th>
-<th width="20%" align="center">v1.0</th>
-<th width="20%" align="center">v1.1</th>
-<th width="20%" align="center">v2.0 🎉</th>
-<th width="22%">改进说明</th>
+<th width="14%">功能特性</th>
+<th width="14%" align="center">v1.0</th>
+<th width="14%" align="center">v1.1</th>
+<th width="14%" align="center">v2.0</th>
+<th width="14%" align="center">v3.0 🎉</th>
+<th width="30%">改进说明</th>
 </tr>
 </thead>
 <tbody>
@@ -149,27 +164,63 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td><b>Zabbix 版本</b></td>
 <td align="center">仅 7.x</td>
 <td align="center">5.x / 6.x / 7.x</td>
+<td align="center">5.x / 6.x / 7.x</td>
 <td align="center"><b>5.x / 6.x / 7.x</b></td>
 <td>v1.1 扩展兼容性</td>
 </tr>
 <tr>
 <td><b>监控大屏</b></td>
-<td align="center">基础大屏<br><sub>固定资产组</sub></td>
-<td align="center">基础大屏<br><sub>自定义资产组</sub></td>
-<td align="center"><b>增强大屏</b><br><sub>多网卡/磁盘</sub></td>
-<td>v1.1 自定义资产组<br>v2.0 多网卡/磁盘</td>
+<td align="center">基础大屏</td>
+<td align="center">自定义资产组</td>
+<td align="center">多网卡/磁盘</td>
+<td align="center"><b>地图告警</b></td>
+<td>v1.1 自定义资产组<br>v2.0 多网卡/磁盘<br>v3.0 地图告警展示</td>
 </tr>
 <tr>
-<td><b>历史数据</b></td>
-<td align="center">预设时间</td>
-<td align="center">自定义时间段</td>
-<td align="center"><b>精确到分钟</b></td>
-<td>v1.1 增强灵活性</td>
+<td><b>主机显示</b></td>
+<td align="center">主机名</td>
+<td align="center">主机名</td>
+<td align="center">主机名</td>
+<td align="center"><b>可见名称</b></td>
+<td>v3.0 支持 Zabbix 可见名称</td>
+</tr>
+<tr>
+<td><b>告警查询</b></td>
+<td align="center">全部告警</td>
+<td align="center">全部告警</td>
+<td align="center">全部告警</td>
+<td align="center"><b>时间范围</b></td>
+<td>v3.0 支持时间范围筛选</td>
+</tr>
+<tr>
+<td><b>告警规则</b></td>
+<td align="center">临时配置</td>
+<td align="center">临时配置</td>
+<td align="center">临时配置</td>
+<td align="center"><b>持久化</b></td>
+<td>v3.0 规则配置持久化</td>
+</tr>
+<tr>
+<td><b>登录流程</b></td>
+<td align="center">数据初始化</td>
+<td align="center">数据初始化</td>
+<td align="center">数据初始化</td>
+<td align="center"><b>直接进入</b></td>
+<td>v3.0 优化流程，解决认证问题</td>
+</tr>
+<tr>
+<td><b>状态判断</b></td>
+<td align="center">单一标准</td>
+<td align="center">单一标准</td>
+<td align="center">单一标准</td>
+<td align="center"><b>双重标准</b></td>
+<td>v3.0 在线/离线双重判断</td>
 </tr>
 <tr>
 <td><b>AI + 告警</b></td>
 <td align="center">✅</td>
 <td align="center">✅</td>
+<td align="center">✅ 内置模型</td>
 <td align="center"><b>✅ 内置模型</b></td>
 <td>v2.0 内置大模型</td>
 </tr>
@@ -177,6 +228,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td><b>多数据源</b></td>
 <td align="center">❌</td>
 <td align="center">❌</td>
+<td align="center">✅</td>
 <td align="center"><b>✅</b></td>
 <td>v2.0 新增</td>
 </tr>
@@ -184,15 +236,9 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td><b>制作大屏</b></td>
 <td align="center">❌</td>
 <td align="center">❌</td>
+<td align="center">✅ 拖拽编辑</td>
 <td align="center"><b>✅ 拖拽编辑</b></td>
 <td>v2.0 新增</td>
-</tr>
-<tr>
-<td><b>Zabbix 配置</b></td>
-<td align="center">需配置群组</td>
-<td align="center">仅配置描述</td>
-<td align="center"><b>零配置</b></td>
-<td>v1.1 简化<br>v2.0 零配置</td>
 </tr>
 </tbody>
 </table>
@@ -273,6 +319,86 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 </table>
 
 </div>
+
+<br>
+
+---
+
+## 🆕 v3.0 新功能亮点
+
+<table width="100%">
+<tr>
+<td width="33%" valign="top">
+
+### 1️⃣ 🗺️ 地图告警展示
+
+监控大屏新增地图样式告警，地理位置可视化展示告警分布，支持告警等级区分和交互式查看。
+
+**适用场景**: 多机房监控、数据中心可视化
+
+---
+
+### 2️⃣ 🏷️ 可见名称支持
+
+全面支持 Zabbix 主机可见名称（Visible Name），优先显示友好名称，未设置时自动使用主机名。
+
+**示例**: `192.168.1.100` → 显示为 `办公网关`
+
+---
+
+### 3️⃣ 🚀 登录流程优化
+
+取消数据初始化加载页面，登录后直接进入监控大屏，解决认证失败和闪退问题。
+
+</td>
+<td width="33%" valign="top">
+
+### 4️⃣ 💾 告警规则持久化
+
+告警规则配置持久化存储到数据库，系统重启后自动恢复，无需重新配置。
+
+**改进**: 临时配置 → 永久生效
+
+---
+
+### 5️⃣ 📅 告警时间筛选
+
+告警信息查询支持自定义时间范围，提供快捷选项（1小时/24小时/7天/30天），精确定位问题。
+
+**用途**: 故障回溯、趋势统计
+
+---
+
+### 6️⃣ 🔍 在线状态检测
+
+支持 3 种判断标准，提高主机状态判断准确性：
+
+- `icmpping` - ICMP Ping 检测
+- `zabbix[host,snmp,available]` - SNMP 可用性
+- `agent.ping` - Agent 心跳检测
+
+</td>
+<td width="33%" valign="top">
+
+### 7️⃣ 💿 磁盘显示修复
+
+修复磁盘使用率计算和显示问题，优化多磁盘展示格式，统一单位显示（GB/TB）。
+
+---
+
+### 🎯 升级建议
+
+**新部署用户**
+- 开箱即用，享受所有新功能
+
+**现有用户升级**
+- 自动兼容旧版本数据
+- 告警规则需重新配置
+- 建议清除浏览器缓存
+
+</td>
+</tr>
+</table>
 
 <br>
 
