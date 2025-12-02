@@ -79,7 +79,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td width="25%" valign="top">
 
 ### 📦 v3.0 (2025-12-02)
-
+版本支持： 支持zabbix5\6\7
 **🎉 重大更新**
 - 🗺️ **地图告警** - 大屏新增地图样式告警展示
 - 🏷️ **可见名称** - 支持 Zabbix 主机可见名称
@@ -326,7 +326,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 ---
 
 ## 🆕 v3.0 新功能亮点
-
+版本支持： 支持zabbix5\6\7
 <table width="100%">
 <tr>
 <td width="33%" valign="top">
