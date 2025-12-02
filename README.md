@@ -82,7 +82,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 
 **🎉 重大更新**
 - 🗺️ **地图告警** - 大屏新增地图样式告警展示
-- 🏷️ **可见名称** - 全面支持 Zabbix 主机可见名称
+- 🏷️ **可见名称** - 支持 Zabbix 主机可见名称
 - 🚀 **流程优化** - 取消数据初始化页面，解决认证失败
 - 💾 **规则持久化** - 告警规则配置持久化存储
 - 📅 **时间筛选** - 告警信息支持时间范围查询
@@ -213,7 +213,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">单一标准</td>
 <td align="center">单一标准</td>
 <td align="center">单一标准</td>
-<td align="center"><b>双重标准</b></td>
+<td align="center"><b>多重标准</b></td>
 <td>v3.0 在线/离线双重判断</td>
 </tr>
 <tr>
@@ -277,7 +277,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center"><b>2️⃣</b></td>
 <td><b>首页监控大屏</b></td>
 <td>实时展示监控数据的可视化大屏</td>
-<td>✅ 多种图表类型<br>✅ 自定义显示资产组</td>
+<td>✅ 多种图表类型<br>✅ 地图告警模块</td>
 </tr>
 <tr>
 <td align="center"><b>3️⃣</b></td>
@@ -363,7 +363,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 
 ### 5️⃣ 📅 告警时间筛选
 
-告警信息查询支持自定义时间范围，提供快捷选项（1小时/24小时/7天/30天），精确定位问题。
+告警信息查询支持自定义时间范围。
 
 **用途**: 故障回溯、趋势统计
 
@@ -383,19 +383,6 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 ### 7️⃣ 💿 磁盘显示修复
 
 修复磁盘使用率计算和显示问题，优化多磁盘展示格式，统一单位显示（GB/TB）。
-
----
-
-### 🎯 升级建议
-
-**新部署用户**
-- 开箱即用，享受所有新功能
-
-**现有用户升级**
-- 自动兼容旧版本数据
-- 告警规则需重新配置
-- 建议清除浏览器缓存
-
 </td>
 </tr>
 </table>
@@ -456,6 +443,7 @@ Zabbix URL: http://your-zabbix-server
 **快捷键**: `F11` 全屏 / `ESC` 退出
 
 ![](项目介绍/images/page_index.png)
+<img width="1870" height="960" alt="image" src="https://github.com/user-attachments/assets/14d85c8a-a08c-4c53-9e7c-7d775e712628" />
 
 </td>
 </tr>
@@ -549,7 +537,7 @@ Zabbix URL: http://your-zabbix-server
 ### 环境要求
 
 - Docker + Docker Compose 
-- Zabbix Server 6.0+
+- Zabbix Server 5.0+
 
 #### 网络端口
 
@@ -589,19 +577,18 @@ docker-compose --version
 
 ```bash
 # 从 GitHub 下载
-git clone https://github.com/zlpu/zabbixwatch-demo.git
+git clone https://github.com/zlpu/zabbixwatch-demo.git 
 
 # 或从 Gitee 下载
 git clone https://gitee.com/root-pu/zabbixwatch-demo.git
 
-cd zabbixwatch-demo
+cd zabbixwatch-demo/Install-zabbixwatch/docker-compose
+
 ```
 
 #### 3. 启动服务
 
 ```bash
-cd Install-zabbixwatch/docker-compose
-
 # 启动所有服务
 docker-compose up -d
 
@@ -615,9 +602,6 @@ docker-compose logs -f
 #### 4. 验证部署
 
 ```bash
-# 检查服务健康状态
-curl http://localhost:5000/api/health
-
 # 访问前端页面
 # 浏览器打开: http://your-server:8088
 ```
