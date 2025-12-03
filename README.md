@@ -156,7 +156,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <th width="14%" align="center">v1.0</th>
 <th width="14%" align="center">v1.1</th>
 <th width="14%" align="center">v2.0</th>
-<th width="14%" align="center">v3.0 🎉</th>
+<th width="14%" align="center">v3.0</th>
 <th width="30%">改进说明</th>
 </tr>
 </thead>
