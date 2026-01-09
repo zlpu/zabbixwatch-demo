@@ -4,10 +4,10 @@
 # ZabbixWatch
 <h3> Zabbix 可视化监控大屏系统</h3>
 
-[![Version](https://img.shields.io/badge/版本-v3.0-blue.svg?style=for-the-badge)](https://github.com/zlpu/zabbixwatch-demo/releases) [![Python](https://img.shields.io/badge/Python-3.11-green.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/) [![Vue](https://img.shields.io/badge/Vue-3.x-brightgreen.svg?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/) [![Docker](https://img.shields.io/badge/Docker-就绪-blue.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Version](https://img.shields.io/badge/版本-v4.0-blue.svg?style=for-the-badge)](https://github.com/zlpu/zabbixwatch-demo/releases) [![Python](https://img.shields.io/badge/Python-3.11-green.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/) [![Vue](https://img.shields.io/badge/Vue-3.x-brightgreen.svg?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/) [![Docker](https://img.shields.io/badge/Docker-blue.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 
 <p align="center">
-  <b>实时监控</b> · <b> 自定义大屏</b> · <b> AI 智能分析</b>
+  <b>实时监控</b> ·<b>网络拓扑</b> · <b> 自定义大屏</b> · <b> AI 智能分析</b>
 </p>
 
 <p align="center">
@@ -38,9 +38,9 @@
 
 ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专为运维团队打造。
 
-**核心价值：**
+**核心功能：**
 - **可视化展示** - 将 Zabbix 监控数据转化为直观的可视化大屏，实时掌握系统运行状态
-- **灵活定制** - 拖拽式大屏编辑器，无需编程即可打造专属监控大屏
+- **动态网络拓扑** - 拖拽式编辑器，无需编程即可打造专属动态网络拓扑图
 - **智能分析** - 内置 AI 大模型（硅基流动、DeepSeek），智能分析告警，快速定位故障根因
 - **多源整合** - 支持配置多个 Zabbix 数据源，统一管理多套环境的监控数据
 - **快速部署** - Docker 一键部署，5 分钟即可上线使用
@@ -66,7 +66,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 
 <div>
 
-### 从 v1.0 到 v3.0 的演进
+### 从 v1.0 到 v4.0 的演进
 
 <sub>持续迭代 · 不断优化 · 追求卓越</sub>
 
@@ -76,6 +76,16 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 
 <table>
 <tr>
+<td width="25%" valign="top">
+
+### v4.0 (2026-01-09)
+版本支持： 支持zabbix5\6\7  付费提供（价格666元）
+**重大更新**
+- **动态网络拓扑** - 自定义网络拓扑图，关联主机数据
+- **手动清理数据** - 运行时间长，可以手动清理数据，解决前端无法请求数据的问题
+
+
+</td>
 <td width="25%" valign="top">
 
 ### v3.0 (2025-12-02)
@@ -157,6 +167,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <th width="14%" align="center">v1.1</th>
 <th width="14%" align="center">v2.0</th>
 <th width="14%" align="center">v3.0</th>
+<th width="14%" align="center">v4.0</th>
 <th width="30%">改进说明</th>
 </tr>
 </thead>
@@ -167,6 +178,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">5.x / 6.x / 7.x</td>
 <td align="center">5.x / 6.x / 7.x</td>
 <td align="center"><b>5.x / 6.x / 7.x</b></td>
+<td align="center"><b>5.x / 6.x / 7.x</b></td>
 <td>v1.1 扩展兼容性</td>
 </tr>
 <tr>
@@ -176,6 +188,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">多网卡/磁盘</td>
 <td align="center"><b>地图告警</b></td>
 <td>v1.1 自定义资产组<br>v2.0 多网卡/磁盘<br>v3.0 地图告警展示</td>
+<td align="center"><b>动态网络拓扑警</b></td>
 </tr>
 <tr>
 <td><b>主机显示</b></td>
@@ -254,10 +267,9 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 
 <div>
 
-## 功能特性
+## 功能
 
-### 八大核心功能 · 全方位监控管理
-
+### 八大核心功能
 <table width="90%">
 <thead>
 <tr style="background-color: #f6f8fa;">
@@ -313,8 +325,14 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <tr>
 <td align="center"><b>8️⃣</b></td>
 <td><b>系统设置</b></td>
-<td>系统配置和账户管理</td>
-<td>✅ 密码管理<br>✅ 数据存储配置</td>
+<td>系统配置</td>
+<td>✅ 数据清理<br>✅ 数据存储配置</td>
+</tr>
+<tr>
+<td align="center"><b>⑨</b></td>
+<td><b>网络拓扑</b></td>
+<td>自定义网络拓扑</td>
+<td>✅ 实时流量<br>✅ 设备实时告警</td>
 </tr>
 </tbody>
 </table>
@@ -323,76 +341,10 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 
 <br>
 
----
-
-## 🆕 v3.0 新功能亮点
-版本支持： 支持zabbix5\6\7
-<table width="100%">
-<tr>
-<td width="33%" valign="top">
-
-### 1️⃣ 地图告警展示
-
-监控大屏新增地图样式告警，地理位置可视化展示告警分布，支持告警等级区分和交互式查看。
-
-**适用场景**: 多机房监控、数据中心可视化
-
----
-
-### 2️⃣ 可见名称支持
-
-全面支持 Zabbix 主机可见名称（Visible Name），优先显示友好名称，未设置时自动使用主机名。
-
-**示例**: `192.168.1.100` → 显示为 `办公网关`
-
----
-
-### 3️⃣ 登录流程优化
-
-取消数据初始化加载页面，登录后直接进入监控大屏，解决认证失败和闪退问题。
-
-</td>
-<td width="33%" valign="top">
-
-### 4️⃣ 告警规则持久化
-
-告警规则配置持久化存储到数据库，系统重启后自动恢复，无需重新配置。
-
-**改进**: 临时配置 → 永久生效
-
----
-
-### 5️⃣ 告警时间筛选
-
-告警信息查询支持自定义时间范围。
-
----
-
-### 6️⃣ 在线状态检测
-
-支持 3 种判断标准，提高主机状态判断准确性：
-
-- `icmpping` - ICMP Ping 检测
-- `zabbix[host,snmp,available]` - SNMP 可用性
-- `agent.ping` - Agent 心跳检测
-
-</td>
-<td width="33%" valign="top">
-
-### 7️⃣ 其他
-
-1、修复磁盘使用率显示问题。
-2、修改数据库配置，修复系统设置数据存储时长不生效问题</td>
-</tr>
-</table>
-
-<br>
-
-
 
 ## 使用教程
 
-### 6 步快速上手 · 轻松掌握核心功能
+### 快速上手 · 轻松掌握核心功能
 
 <table width="85%">
 <tr>
@@ -443,6 +395,15 @@ Zabbix URL: http://your-zabbix-server
 
 ![](项目介绍/images/page_index.png)
 <img width="1870" height="960" alt="image" src="https://github.com/user-attachments/assets/14d85c8a-a08c-4c53-9e7c-7d775e712628" />
+
+网络拓扑
+
+**操作**: 左侧菜单 → 监控大屏-网络拓扑图
+
+**功能**: 自定义网络拓扑图-关联主机实时数据
+
+**快捷键**: `F11` 全屏 / `ESC` 退出
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/93124af8-bcb2-421b-8d21-f81446923899" />
 
 </td>
 </tr>
@@ -514,9 +475,10 @@ Zabbix URL: http://your-zabbix-server
 
 **操作**: 左侧菜单 → 系统设置
 
-**功能**: 定义首页大屏标题、定义会话有效期、数据存储时长、登录日志 
+**功能**: 定义首页大屏标题、定义会话有效期、数据存储时长、登录日志 、手动清理数据
 
-![](项目介绍/images/page_setings.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/09a5a410-402a-4b9f-822c-d081de4f5700" />
+
 
 </td>
 </tr>
@@ -525,7 +487,7 @@ Zabbix URL: http://your-zabbix-server
 
 <br>
 
-### 恭喜！你已经掌握了 ZabbixWatch 的功能
+### 你已经掌握了 ZabbixWatch 的功能
 
 
 <br>
@@ -535,22 +497,8 @@ Zabbix URL: http://your-zabbix-server
 
 ### 环境要求
 
-- Docker + Docker Compose 
+- Docker + Docker Compose （api 3.8）
 - Zabbix Server 5.0+
-
-#### 网络端口
-
-| 方向 | 端口/协议 | 组件/用途 | 说明 |
-|---|---|---|---|
-| 入站 | `8088/tcp` | Nginx HTTP | Web 前端入口 |
-| 入站 | `443/tcp` | Nginx HTTPS | 启用证书时使用 |
-| 入站 | `3366/tcp` | MySQL（映射） | 宿主映射容器 `3306`，外部客户端访问可选 |
-| 出站 | `80/443` | Zabbix 前端 API | `<Zabbix URL>/api_jsonrpc.php` |
-| 出站 | `80/443` | 外部服务 | Web监控目标站点、消息/AI服务（微信/飞书/钉钉、硅基流动、DeepSeek） |
-
-
-
-
 
 
 ## 部署指南
@@ -655,14 +603,13 @@ A: 可能的原因：
 2. 数据源配置错误
 3. 缓存问题（清除浏览器缓存）
 4. 后端服务异常（查看日志）
+5. 系统设置 - 清理数据
 
 <br>
 
 
 
-## 贡献
 
-欢迎报告问题或提出建议！
 
 
 ### 报告问题
