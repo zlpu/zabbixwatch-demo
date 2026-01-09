@@ -79,7 +79,9 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td width="25%" valign="top">
 
 ### v4.0 (2026-01-09)
-版本支持： 支持zabbix5\6\7  付费提供（价格666元）
+- 版本支持： 支持zabbix5\6\7  
+- 付费提供（价格666元）
+
 **重大更新**
 - **动态网络拓扑** - 自定义网络拓扑图，关联主机数据
 - **手动清理数据** - 运行时间长，可以手动清理数据，解决前端无法请求数据的问题
@@ -90,6 +92,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 
 ### v3.0 (2025-12-02)
 版本支持： 支持zabbix5\6\7
+
 **重大更新**
 - **地图告警** - 大屏新增地图样式告警展示
 - **可见名称** - 支持 Zabbix 主机可见名称
@@ -179,7 +182,6 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">5.x / 6.x / 7.x</td>
 <td align="center"><b>5.x / 6.x / 7.x</b></td>
 <td align="center"><b>5.x / 6.x / 7.x</b></td>
-<td>v1.1 扩展兼容性</td>
 </tr>
 <tr>
 <td><b>监控大屏</b></td>
@@ -187,7 +189,6 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">自定义资产组</td>
 <td align="center">多网卡/磁盘</td>
 <td align="center"><b>地图告警</b></td>
-<td>v1.1 自定义资产组<br>v2.0 多网卡/磁盘<br>v3.0 地图告警展示</td>
 <td align="center"><b>动态网络拓扑警</b></td>
 </tr>
 <tr>
@@ -196,7 +197,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">主机名</td>
 <td align="center">主机名</td>
 <td align="center"><b>可见名称</b></td>
-<td>v3.0 支持 Zabbix 可见名称</td>
+<td align="center"><b>可见名称</b></td>
 </tr>
 <tr>
 <td><b>告警查询</b></td>
@@ -204,7 +205,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">全部告警</td>
 <td align="center">全部告警</td>
 <td align="center"><b>时间范围</b></td>
-<td>v3.0 支持时间范围筛选</td>
+<td align="center"><b>时间范围</b></td>
 </tr>
 <tr>
 <td><b>告警规则</b></td>
@@ -212,7 +213,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">临时配置</td>
 <td align="center">临时配置</td>
 <td align="center"><b>持久化</b></td>
-<td>v3.0 规则配置持久化</td>
+<td align="center"><b>持久化</b></td>
 </tr>
 <tr>
 <td><b>登录流程</b></td>
@@ -220,7 +221,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">数据初始化</td>
 <td align="center">数据初始化</td>
 <td align="center"><b>直接进入</b></td>
-<td>v3.0 优化流程，解决认证问题</td>
+<td align="center"><b>直接进入</b></td>
 </tr>
 <tr>
 <td><b>状态判断</b></td>
@@ -228,7 +229,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">单一标准</td>
 <td align="center">单一标准</td>
 <td align="center"><b>多重标准</b></td>
-<td>v3.0 在线/离线双重判断</td>
+<td align="center"><b>多重标准</b></td>
 </tr>
 <tr>
 <td><b>AI + 告警</b></td>
@@ -236,7 +237,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">✅</td>
 <td align="center">✅ 内置模型</td>
 <td align="center"><b>✅ 内置模型</b></td>
-<td>v2.0 内置大模型</td>
+<td align="center"><b>✅ 内置模型</b></td>
 </tr>
 <tr>
 <td><b>多数据源</b></td>
@@ -244,7 +245,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">❌</td>
 <td align="center">✅</td>
 <td align="center"><b>✅</b></td>
-<td>v2.0 新增</td>
+<td align="center"><b>✅</b></td>
 </tr>
 <tr>
 <td><b>制作大屏</b></td>
@@ -252,7 +253,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <td align="center">❌</td>
 <td align="center">✅ 拖拽编辑</td>
 <td align="center"><b>✅ 拖拽编辑</b></td>
-<td>v2.0 新增</td>
+<td align="center"><b>✅ 拖拽编辑</b></td>
 </tr>
 </tbody>
 </table>
