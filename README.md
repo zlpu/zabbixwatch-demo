@@ -66,7 +66,7 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 
 <div>
 
-### 从 v1.0 到 v4.0 的演进
+### 从 v1.0 到 v4.0 
 
 <sub>持续迭代 · 不断优化 · 追求卓越</sub>
 
@@ -171,7 +171,6 @@ ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专
 <th width="14%" align="center">v2.0</th>
 <th width="14%" align="center">v3.0</th>
 <th width="14%" align="center">v4.0</th>
-<th width="30%">改进说明</th>
 </tr>
 </thead>
 <tbody>
