@@ -1,703 +1,471 @@
 <div align="center">
 
+# ZabbixWatch
+Zabbix 可视化监控大屏系统
 
-# 🎯 ZabbixWatch
-<h3> Zabbix 可视化监控大屏系统</h3>
+实时监控 · 动态网络拓扑 · 自定义大屏 · AI 智能分析
 
-[![Version](https://img.shields.io/badge/版本-v3.0-blue.svg?style=for-the-badge)](https://github.com/zlpu/zabbixwatch-demo/releases) [![Python](https://img.shields.io/badge/Python-3.11-green.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/) [![Vue](https://img.shields.io/badge/Vue-3.x-brightgreen.svg?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/) [![Docker](https://img.shields.io/badge/Docker-就绪-blue.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
-
-<p align="center">
-  <b>🎨 实时监控</b> · <b>🛠 自定义大屏</b> · <b>🤖 AI 智能分析</b>
-</p>
-
-<p align="center">
-  <i>zabbix零配置接入 · 开箱即用 · 5分钟快速部署</i>
-</p>
-
-<p align="center">
-  <a href="#-快速开始">
-    <img src="https://img.shields.io/badge/-快速开始-blue?style=for-the-badge" alt="快速开始">
-  </a>
-  <a href="#-功能特性">
-    <img src="https://img.shields.io/badge/-功能文档-green?style=for-the-badge" alt="功能文档">
-  </a>
-  <a href="#-部署指南">
-    <img src="https://img.shields.io/badge/-部署指南-orange?style=for-the-badge" alt="部署指南">
-  </a>
-  <a href="#-常见问题">
-    <img src="https://img.shields.io/badge/-常见问题-red?style=for-the-badge" alt="常见问题">
-  </a>
-</p>
+zabbix零配置接入 · 开箱即用 · 5分钟快速部署
 
 </div>
 
 
 
 
-## 📖 项目简介
 
-ZabbixWatch 是一个基于 Zabbix 的企业级可视化监控大屏系统，专为运维团队打造。
+## 项目简介
 
-**核心价值：**
-- 📊 **可视化展示** - 将 Zabbix 监控数据转化为直观的可视化大屏，实时掌握系统运行状态
-- 🎨 **灵活定制** - 拖拽式大屏编辑器，无需编程即可打造专属监控大屏
-- 🤖 **智能分析** - 内置 AI 大模型（硅基流动、DeepSeek），智能分析告警，快速定位故障根因
-- 🔗 **多源整合** - 支持配置多个 Zabbix 数据源，统一管理多套环境的监控数据
-- 🚀 **快速部署** - Docker 一键部署，5 分钟即可上线使用
-- ⚡️ **零配置接入** - 直接接入 Zabbix 即可，无需在 Zabbix 端做任何修改或配置
+ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维团队打造。
 
-**适用场景：** 企业 IT 运维监控、数据中心可视化、多机房统一监控、运维大屏展示
+网站：https://zabbixwatch.data-demo.cn
 
-<br>
+核心功能：
 
-## 📞 联系方式
+- 监控大屏：配置zabbix数据源后自动采集zabbix监控数据，渲染可视化效果
+- 网络拓扑：用户可以根据自己的环境自定义网络拓扑，动态展示实时流量及主机数据
+- 历史数据：多维度展示主机历史数据
+- web监控：不依赖于zabbix，可对常用的网站进行状态码等指标的监控
+- AI+告警：用户可自定义告警规则、设置告警消息接收方式、设置AI大模型进行辅助告警分析
+- 报表统计：对告警信息进行统计
+- 大屏制作：用户可自定义监控大屏并制作轮播图
+- 系统设置：可自定义监控大屏的标题、会话有效期及数据存储时长
+- 指标管理：自定义映射监控指标键值、过滤首页展示的主机
 
-- **作者微信**: pzl960504
-- **GitHub**: https://github.com/zlpu/zabbixwatch-demo
-- **Gitee**: https://gitee.com/root-pu/zabbixwatch-demo
-- **Email**: 2925006354@qq.com
+适用场景：IT 运维监控、数据中心可视化、多机房统一监控、运维大屏展示
 
-<br>
+## 联系方式
 
+- 作者微信: pzl960504
+- GitHub: https://github.com/zlpu/zabbixwatch-demo
+- Gitee: https://gitee.com/root-pu/zabbixwatch-demo
+- Email: 2925006354@qq.com
 
-<div>
 
-## 📋 版本历史
 
-<div>
+## 版本历史
+>v4及后续版本需要有偿提供，v3版免费不开源
+>>付费方式：https://item.taobao.com/item.htm?ft=t&id=1012720700836
 
-### 🚀 从 v1.0 到 v3.0 的演进
+### v4 (2026-01-18) - 当前版本
 
-<sub>持续迭代 · 不断优化 · 追求卓越</sub>
+更新：
 
-</div>
+- 支持自定义监控指标键值：用户自行维护指标键值映射关系
+- 支持过滤首页展示的主机：可自定义需要在首页展示的主机
+- 新增网络拓扑功能：用户可以根据自己的环境自定义网络拓扑，动态展示实时流量及主机数据
+- 数据库切换为mariadb：解决mysql8适配问题
+### v3.0 (2025-12-02)
 
-<div>
+主要更新：
 
-<table>
-<tr>
-<td width="25%" valign="top">
-
-### 📦 v3.0 (2025-12-02)
-
-**🎉 重大更新**
-- 🗺️ **地图告警** - 大屏新增地图样式告警展示
-- 🏷️ **可见名称** - 全面支持 Zabbix 主机可见名称
-- 🚀 **流程优化** - 取消数据初始化页面，解决认证失败
-- 💾 **规则持久化** - 告警规则配置持久化存储
-- 📅 **时间筛选** - 告警信息支持时间范围查询
-- 🔍 **状态判断** - 在线/离线增加双重判断标准
-- 💿 **磁盘显示** - 修复磁盘使用率显示问题
-
-</td>
-<td width="25%" valign="top">
-
-### 📦 v2.0 (2025-11-04)
-
-**🎉 重大更新**
-- ⚡️ **零配置接入** - 直接接入 Zabbix
-- 🎨 **自定义大屏** - 拖拽式编辑器
-- 🔗 **多数据源** - 支持多个 Zabbix
-- 🤖 **AI 增强** - 内置大模型
-- 📊 **大屏优化** - 流量 TOP10
-- 🏗 **架构重构** - 模块化设计
-
-</td>
-<td width="25%" valign="top">
-
-### 📦 v1.1 (2025-09-14)
-
-**💚 功能增强**
-- ✅ 扩展 Zabbix 版本支持
-- ✅ 自定义资产组显示
-- ✅ 自定义时间段查询
-- ✅ 简化 Zabbix 配置
-- ✅ Docker Compose 部署
-
-**改进说明**
-- 只需配置监控项描述字段
-- 不再需要调整主机群组
-
-</td>
-<td width="25%" valign="top">
-
-### 📦 v1.0 (2025-08-29)
-
-**🎊 首次发布**
-- ✅ 基础监控大屏
-- ✅ 历史数据趋势图
-- ✅ Web 站点监控
-- ✅ AI + 告警分析
-- ✅ Webhook 消息通知
-- ✅ 容器化部署
-
-**限制说明**
-- 仅支持 Zabbix 7.x
-- 需配置主机群组
-
-</td>
-</tr>
-</table>
-
-</div>
-
-<details>
-<summary><b>📊 点击查看详细版本对比表</b></summary>
-
-<br>
-
-<div>
-
-<table>
-<thead>
-<tr style="background-color: #f6f8fa;">
-<th width="14%">功能特性</th>
-<th width="14%" align="center">v1.0</th>
-<th width="14%" align="center">v1.1</th>
-<th width="14%" align="center">v2.0</th>
-<th width="14%" align="center">v3.0 🎉</th>
-<th width="30%">改进说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><b>Zabbix 版本</b></td>
-<td align="center">仅 7.x</td>
-<td align="center">5.x / 6.x / 7.x</td>
-<td align="center">5.x / 6.x / 7.x</td>
-<td align="center"><b>5.x / 6.x / 7.x</b></td>
-<td>v1.1 扩展兼容性</td>
-</tr>
-<tr>
-<td><b>监控大屏</b></td>
-<td align="center">基础大屏</td>
-<td align="center">自定义资产组</td>
-<td align="center">多网卡/磁盘</td>
-<td align="center"><b>地图告警</b></td>
-<td>v1.1 自定义资产组<br>v2.0 多网卡/磁盘<br>v3.0 地图告警展示</td>
-</tr>
-<tr>
-<td><b>主机显示</b></td>
-<td align="center">主机名</td>
-<td align="center">主机名</td>
-<td align="center">主机名</td>
-<td align="center"><b>可见名称</b></td>
-<td>v3.0 支持 Zabbix 可见名称</td>
-</tr>
-<tr>
-<td><b>告警查询</b></td>
-<td align="center">全部告警</td>
-<td align="center">全部告警</td>
-<td align="center">全部告警</td>
-<td align="center"><b>时间范围</b></td>
-<td>v3.0 支持时间范围筛选</td>
-</tr>
-<tr>
-<td><b>告警规则</b></td>
-<td align="center">临时配置</td>
-<td align="center">临时配置</td>
-<td align="center">临时配置</td>
-<td align="center"><b>持久化</b></td>
-<td>v3.0 规则配置持久化</td>
-</tr>
-<tr>
-<td><b>登录流程</b></td>
-<td align="center">数据初始化</td>
-<td align="center">数据初始化</td>
-<td align="center">数据初始化</td>
-<td align="center"><b>直接进入</b></td>
-<td>v3.0 优化流程，解决认证问题</td>
-</tr>
-<tr>
-<td><b>状态判断</b></td>
-<td align="center">单一标准</td>
-<td align="center">单一标准</td>
-<td align="center">单一标准</td>
-<td align="center"><b>双重标准</b></td>
-<td>v3.0 在线/离线双重判断</td>
-</tr>
-<tr>
-<td><b>AI + 告警</b></td>
-<td align="center">✅</td>
-<td align="center">✅</td>
-<td align="center">✅ 内置模型</td>
-<td align="center"><b>✅ 内置模型</b></td>
-<td>v2.0 内置大模型</td>
-</tr>
-<tr>
-<td><b>多数据源</b></td>
-<td align="center">❌</td>
-<td align="center">❌</td>
-<td align="center">✅</td>
-<td align="center"><b>✅</b></td>
-<td>v2.0 新增</td>
-</tr>
-<tr>
-<td><b>制作大屏</b></td>
-<td align="center">❌</td>
-<td align="center">❌</td>
-<td align="center">✅ 拖拽编辑</td>
-<td align="center"><b>✅ 拖拽编辑</b></td>
-<td>v2.0 新增</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-
-</details>
-
-<br>
-
-
-
-<div>
-
-## ✨ 功能特性
-
-### 🎯 八大核心功能 · 全方位监控管理
-
-<table width="90%">
-<thead>
-<tr style="background-color: #f6f8fa;">
-<th width="10%" align="center">序号</th>
-<th width="22%">功能模块</th>
-<th width="35%">功能描述</th>
-<th width="33%">核心亮点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><b>1️⃣</b></td>
-<td><b>配置多 Zabbix 数据源</b></td>
-<td>支持配置和管理多个 Zabbix 服务器</td>
-<td>✅ 统一管理多套环境<br>✅ 数据源快速切换</td>
-</tr>
-<tr>
-<td align="center"><b>2️⃣</b></td>
-<td><b>首页监控大屏</b></td>
-<td>实时展示监控数据的可视化大屏</td>
-<td>✅ 多种图表类型<br>✅ 自定义显示资产组</td>
-</tr>
-<tr>
-<td align="center"><b>3️⃣</b></td>
-<td><b>主机历史数据查看</b></td>
-<td>查询和分析主机历史监控数据</td>
-<td>✅ 自定义时间段<br>✅ 精确数据分析</td>
-</tr>
-<tr>
-<td align="center"><b>4️⃣</b></td>
-<td><b>Web 监控</b></td>
-<td>HTTP/HTTPS 站点可用性监控</td>
-<td>✅ 实时监控站点状态<br>✅ 响应时间分析</td>
-</tr>
-<tr>
-<td align="center"><b>5️⃣</b></td>
-<td><b>AI + 告警</b></td>
-<td>AI 大模型智能分析告警</td>
-<td>✅ 内置硅基流动、DeepSeek<br>✅ 智能故障分析</td>
-</tr>
-<tr>
-<td align="center"><b>6️⃣</b></td>
-<td><b>告警统计</b></td>
-<td>多维度告警数据统计分析</td>
-<td>✅ 多维度统计<br>✅ 趋势分析</td>
-</tr>
-<tr>
-<td align="center"><b>7️⃣</b></td>
-<td><b>制作大屏</b></td>
-<td>自定义可视化大屏、支持轮播</td>
-<td>✅ 拖拽式设计<br>✅ 丰富组件库</td>
-</tr>
-<tr>
-<td align="center"><b>8️⃣</b></td>
-<td><b>系统设置</b></td>
-<td>系统配置和账户管理</td>
-<td>✅ 密码管理<br>✅ 数据存储配置</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-
-<br>
-
----
-
-## 🆕 v3.0 新功能亮点
-
-<table width="100%">
-<tr>
-<td width="33%" valign="top">
-
-### 1️⃣ 🗺️ 地图告警展示
-
-监控大屏新增地图样式告警，地理位置可视化展示告警分布，支持告警等级区分和交互式查看。
-
-**适用场景**: 多机房监控、数据中心可视化
-
----
-
-### 2️⃣ 🏷️ 可见名称支持
-
-全面支持 Zabbix 主机可见名称（Visible Name），优先显示友好名称，未设置时自动使用主机名。
-
-**示例**: `192.168.1.100` → 显示为 `办公网关`
-
----
-
-### 3️⃣ 🚀 登录流程优化
-
-取消数据初始化加载页面，登录后直接进入监控大屏，解决认证失败和闪退问题。
-
-</td>
-<td width="33%" valign="top">
-
-### 4️⃣ 💾 告警规则持久化
-
-告警规则配置持久化存储到数据库，系统重启后自动恢复，无需重新配置。
-
-**改进**: 临时配置 → 永久生效
-
----
-
-### 5️⃣ 📅 告警时间筛选
-
-告警信息查询支持自定义时间范围，提供快捷选项（1小时/24小时/7天/30天），精确定位问题。
-
-**用途**: 故障回溯、趋势统计
-
----
-
-### 6️⃣ 🔍 在线状态检测
-
-支持 3 种判断标准，提高主机状态判断准确性：
-
-- `icmpping` - ICMP Ping 检测
-- `zabbix[host,snmp,available]` - SNMP 可用性
-- `agent.ping` - Agent 心跳检测
-
-</td>
-<td width="33%" valign="top">
-
-### 7️⃣ 💿 磁盘显示修复
-
-修复磁盘使用率计算和显示问题，优化多磁盘展示格式，统一单位显示（GB/TB）。
-
----
-
-### 🎯 升级建议
-
-**新部署用户**
-- 开箱即用，享受所有新功能
-
-**现有用户升级**
-- 自动兼容旧版本数据
-- 告警规则需重新配置
-- 建议清除浏览器缓存
-
-</td>
-</tr>
-</table>
-
-<br>
-
-
-
-## 📖 使用教程
-
-### 🎓 6 步快速上手 · 轻松掌握核心功能
-
-<table width="85%">
-<tr>
-<td>
-
-#### 1️⃣ 首次登录
-
-**访问地址**: `http://your-server:8088`  
-**默认账号**: `admin` / `admin123`
-
-> 💡 首次登录后请立即修改密码
+- 地图告警：大屏新增地图样式告警展示
+- 可见名称：全面支持 Zabbix 主机可见名称
+- 流程优化：取消数据初始化页面，解决认证失败
+- 规则持久化：告警规则配置持久化存储
+- 时间筛选：告警信息支持时间范围查询
+- 状态判断：在线/离线增加双重判断标准
+- 磁盘显示：修复磁盘使用率显示问题
+
+### v2.0 (2025-11-04)
+
+主要更新：
+
+- 零配置接入：直接接入 Zabbix
+- 自定义大屏：拖拽式编辑器
+- 多数据源：支持多个 Zabbix
+- AI 增强：内置大模型
+- 大屏优化：流量 TOP10
+- 架构重构：模块化设计
+
+### v1.1 (2025-09-14)
+
+功能增强：
+
+- 扩展 Zabbix 版本支持（5.x/6.x/7.x）
+- 自定义资产组显示
+- 自定义时间段查询
+- 简化 Zabbix 配置
+- Docker Compose 部署
+
+### v1.0 (2025-08-29)
+
+首次发布：
+
+- 基础监控大屏
+- 历史数据趋势图
+- Web 站点监控
+- AI + 告警分析
+- Webhook 消息通知
+- 容器化部署
+
+
+
+## 使用教程
+
+
+#### 1. 首次登录
+
+访问地址: http://your-server:8088
+默认账号: admin / admin123
+
+注意：首次登录后请立即修改密码
 
 ![](项目介绍/images/login.png)
 
-</td>
-</tr>
-<tr>
-<td>
+#### 2. 配置 Zabbix 数据源
 
-#### 2️⃣ 配置 Zabbix 数据源
+操作路径：右上角系统设置 → 数据源配置
 
-**操作**: 右上角 ⚙️ 系统设置 → 数据源配置
+配置信息：
+- Zabbix URL: http://your-zabbix-server
+- 用户名: Admin（使用实际的账号密码）
+- 密码: zabbix
 
-```yaml
-Zabbix URL: http://your-zabbix-server
-用户名: Admin（使用实际的账号密码）
-密码: zabbix
-```
+点击测试连接，确认连接成功后保存配置。
 
-点击 **🔍 测试连接** → **💾 保存配置**
-
-> ⚡️ **零配置**: 无需在 Zabbix 端做任何修改！
+零配置说明：无需在 Zabbix 端做任何修改，直接配置即可使用。
 
 ![](项目介绍/images/datasources.png)
 
-</td>
-</tr>
-<tr>
-<td>
+#### 3. 查看监控大屏
 
-#### 3️⃣ 查看监控大屏
+操作路径：左侧菜单 → 监控大屏
 
-**操作**: 左侧菜单 → 📊 监控大屏
-
-**功能**: 自动加载数据 · 实时刷新 · 自定义资产组 · 全屏展示 
-
-**快捷键**: `F11` 全屏 / `ESC` 退出
+功能说明：
+- 自动加载数据，实时刷新
+- 支持自定义资产组显示
+- 支持全屏展示（F11 全屏 / ESC 退出）
+- 地图告警展示
 
 ![](项目介绍/images/page_index.png)
+操作: 左侧菜单 → 监控大屏-网络拓扑图
 
-</td>
-</tr>
-<tr>
-<td>
+功能: 自定义网络拓扑图-关联主机实时数据
 
-#### 4️⃣ 查看历史数据
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/93124af8-bcb2-421b-8d21-f81446923899" />
 
-**操作**: 左侧菜单 → 📈 历史数据
+#### 4. 查看历史数据
 
-**功能**: 自定义时间段（精确到分钟）· 多指标对比 
+操作路径：左侧菜单 → 历史数据
+
+功能说明：
+- 自定义时间段查询（精确到分钟）
+- 多指标对比分析
+- 支持数据导出
 
 ![](项目介绍/images/page_history1.png)
 ![](项目介绍/images/page_history2.png)
 
-</td>
-</tr>
-<tr>
-<td>
+#### 5. Web 监控
 
-#### 5️⃣ Web 监控
+操作路径：左侧菜单 → Web 监控
 
-**操作**: 左侧菜单 → 🌐 Web 监控
+功能说明：
+- 实时监控站点状态
+- 响应时间分析
+- 可用性统计
 
 ![](项目介绍/images/page_web.png)
 
-</td>
-</tr>
-<tr>
-<td>
+#### 6. 配置告警规则和 AI 模型
 
-#### 6️⃣ 配置告警规则、消息配置、AI 大模型
+操作路径：左侧菜单 → AI+告警
 
-**操作**: ⚙️ AI+告警 
-
-**内置规则**: 主机告警规则、Web 站点告警规则
+告警规则配置：
+- 主机告警规则
+- Web 站点告警规则
+- 自定义告警阈值和时间窗口
 
 ![](项目介绍/images/page_alert_rules.png)
 
-**内置消息模板**: 支持微信、飞书、钉钉
+消息配置：
+- 支持微信、飞书、钉钉
+- 自定义消息模板
 
 ![](项目介绍/images/page_alert_msg.png)
 
-**内置模型服务商**: 🤖 硅基流动 / 🧠 DeepSeek  
-**自定义模型**: 配置 API 地址和 Key
+AI 模型配置：
+- 内置服务商：硅基流动、DeepSeek、OpenAI
+- 支持自定义模型 API 地址和 Key
 
 ![](项目介绍/images/page_alert_ai.png)
 
-</td>
-</tr>
-<tr>
-<td>
+#### 7. 制作自定义大屏
 
-#### 7️⃣ 制作自定义大屏
+操作路径：左侧菜单 → 制作大屏 → 新建
 
-**操作**: 左侧菜单 → 🎨 制作大屏 → ➕ 新建
-
-**流程**: 拖拽组件 → 调整布局 → 配置数据 → 设置背景 → 预览 → 保存
+操作流程：
+1. 拖拽组件到画布
+2. 调整布局和大小
+3. 配置数据源
+4. 设置背景和样式
+5. 预览效果
+6. 保存大屏
 
 ![](项目介绍/images/page_bashboard_edit.png)
 ![](项目介绍/images/page_show.png)
 
-</td>
-</tr>
-<tr>
-<td>
+#### 8. 指标管理（v4 新增）
 
-#### 8️⃣ 系统设置
+操作路径：系统设置 → 指标管理
 
-**操作**: 左侧菜单 → ⚙️ 系统设置
+功能说明：
+- 监控指标键值映射管理
+- 首页主机过滤
 
-**功能**: 定义首页大屏标题、定义会话有效期、数据存储时长、登录日志 
+<img width="1840" height="924" alt="image" src="https://github.com/user-attachments/assets/4a893190-8006-4628-add4-aefa46a0d8ad" />
+<img width="1856" height="930" alt="image" src="https://github.com/user-attachments/assets/ffa998d4-578e-459b-ab87-5a0ea1618a29" />
+
+#### 9. 系统设置
+
+操作路径：左侧菜单 → 系统设置
+
+功能说明：
+- 定义首页大屏标题
+- 设置会话有效期
+- 配置数据存储时长
+
 
 ![](项目介绍/images/page_setings.png)
 
-</td>
-</tr>
-
-</table>
-
-<br>
-
-### 🎉 恭喜！你已经掌握了 ZabbixWatch 的功能
 
 
-<br>
-
-
-## 🚀 快速开始
+## 部署指南
 
 ### 环境要求
 
-- Docker + Docker Compose 
-- Zabbix Server 6.0+
-
-#### 网络端口
-
-| 方向 | 端口/协议 | 组件/用途 | 说明 |
-|---|---|---|---|
-| 入站 | `8088/tcp` | Nginx HTTP | Web 前端入口 |
-| 入站 | `443/tcp` | Nginx HTTPS | 启用证书时使用 |
-| 入站 | `3366/tcp` | MySQL（映射） | 宿主映射容器 `3306`，外部客户端访问可选 |
-| 出站 | `80/443` | Zabbix 前端 API | `<Zabbix URL>/api_jsonrpc.php` |
-| 出站 | `80/443` | 外部服务 | Web监控目标站点、消息/AI服务（微信/飞书/钉钉、硅基流动、DeepSeek） |
+- Docker 20.10+
+- Docker Compose 1.29+
+- Zabbix Server 5.0+
 
 
+### 一、新系统搭建
 
+#### 1. 安装 Docker 环境
 
-
-
-## 📚 部署指南
-
-### Docker Compose 部署
-
-#### 1. 准备工作
-
-确保已安装 Docker 和 Docker Compose：
+如果系统未安装 Docker，执行以下命令一键安装：
 
 ```bash
-# 一键安装 Docker
+# Linux 系统一键安装 Docker
 bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
 
-# 检查 Docker 版本
+# 验证安装
 docker --version
-
-# 检查 Docker Compose 版本
 docker-compose --version
 ```
 
-#### 2. 下载项目
+Windows 系统请访问 Docker 官网下载 Docker Desktop：https://www.docker.com/products/docker-desktop
+
+#### 2. 下载项目文件
 
 ```bash
 # 从 GitHub 下载
 git clone https://github.com/zlpu/zabbixwatch-demo.git
 
-# 或从 Gitee 下载
+# 或从 Gitee 下载（国内推荐）
 git clone https://gitee.com/root-pu/zabbixwatch-demo.git
 
-cd zabbixwatch-demo
+# 进入项目目录
+cd zabbixwatch-demo/Install-zabbixwatch/docker-compose
 ```
+
 
 #### 3. 启动服务
 
 ```bash
-cd Install-zabbixwatch/docker-compose
-
 # 启动所有服务
 docker-compose up -d
 
 # 查看服务状态
 docker-compose ps
 
-# 查看日志
+# 查看启动日志
 docker-compose logs -f
 ```
 
-#### 4. 验证部署
+等待所有服务启动完成（约 1-2 分钟），看到类似以下输出表示成功：
+
+```
+zabbixwatch-web      ... Up      0.0.0.0:8088->80/tcp
+zabbixwatch-backend  ... Up      5000/tcp
+zabbixwatch-mysql    ... Up      3306/tcp
+```
+
+#### 5. 访问系统
+
+浏览器访问：http://your-server-ip:8088
+
+默认账号：admin / admin123
+
+首次登录后请立即修改密码。
+
+#### 6. 配置 Zabbix 数据源
+
+登录后进入系统设置 → 数据源配置，添加您的 Zabbix 服务器信息。
+
+### 二、版本更新
+
+#### 方式一：保留数据更新（推荐）
+
+适用于需要保留历史数据和配置的场景。
 
 ```bash
-# 检查服务健康状态
-curl http://localhost:5000/api/health
+# 1. 进入项目目录
+cd zabbixwatch-demo/Install-zabbixwatch/docker-compose
+
+# 2. 拉取最新代码
+git pull
+
+# 3. 拉取最新镜像
+docker-compose pull
+
+# 4. 停止旧服务（不删除数据）
+docker-compose stop
+
+# 5. 启动新版本
+docker-compose up -d
+
+# 6. 查看更新日志
+docker-compose logs -f
+```
+
+数据库和配置文件会自动保留，无需重新配置。
+
+#### 方式二：全新安装更新
+
+适用于需要清空所有数据重新开始的场景。
+
+```bash
+# 1. 进入项目目录
+cd zabbixwatch-demo/Install-zabbixwatch/docker-compose
+
+# 2. 停止并删除所有容器和数据
+docker-compose down -v
+
+# 3. 拉取最新代码
+git pull
+
+# 4. 启动新版本
+docker-compose up -d
+```
+
+注意：此方式会删除所有数据，包括用户配置、大屏配置、告警规则等。
+
+#### 更新后验证
+
+```bash
+# 检查服务状态
+docker-compose ps
+
 
 # 访问前端页面
 # 浏览器打开: http://your-server:8088
 ```
 
-#### 5. 停止服务
+建议更新后清除浏览器缓存，避免前端资源缓存导致的问题。
+
+### 三、系统卸载
+
+#### 完全卸载（删除所有数据）
 
 ```bash
-# 停止服务
-docker-compose stop
+# 1. 进入项目目录
+cd zabbixwatch-demo/Install-zabbixwatch/docker-compose
 
-# 停止并删除容器
-docker-compose down
-
-# 停止并删除容器和数据卷
+# 2. 停止并删除容器、网络、数据卷
 docker-compose down -v
+
+# 3. 删除镜像（可选）
+docker rmi $(docker images | grep zabbixwatch | awk '{print $3}')
+
+# 4. 删除项目文件（可选）
+cd ../../..
+rm -rf zabbixwatch-demo
 ```
 
-<br>
+#### 仅停止服务（保留数据）
+
+```bash
+# 停止服务但保留数据
+docker-compose stop
+
+# 或者停止并删除容器但保留数据卷
+docker-compose down
+```
+
+
+### 常见部署问题
+
+#### 问题 1：端口被占用
+
+错误信息：Bind for 0.0.0.0:8088 failed: port is already allocated
+
+解决方法：
+```bash
+# 查看端口占用
+netstat -tunlp | grep 8088
+
+# 修改 docker-compose.yml 中的端口
+ports:
+  - "8080:80"  # 改为其他未占用端口
+```
+
+#### 问题 2：容器启动失败
+
+错误信息：Container exited with code 1
+
+解决方法：
+```bash
+# 查看详细日志
+docker compose logs -f
+
+```
+
+
+#### 问题 3：进入监控大屏闪退
+
+解决方法：
+1、若重启了服务器，需重新初始化zabbix数据源
+2、长时间未操作系统，发生闪退现象，需要点击退出登录后重新登录
+
+#### 问题 4：无法连接 Zabbix 服务器？
+
+检查以下几点：
+- Zabbix URL 是否正确（不需要包含 /api_jsonrpc.php）
+- Zabbix 用户名和密码是否正确
+- 网络是否连通（可以在容器内 ping Zabbix 服务器）
+- Zabbix API 版本是否兼容（支持 5.0+）
+
+
+#### 问题 5：大屏卡顿？
+
+解决方法：
+- 使用性能更好的浏览器
+- 关闭不必要的浏览器插件
+- 尽量使用显卡性能稍微好点的电脑进行播放大屏
 
 
 
+## 贡献与支持
 
+### 问题反馈
 
-## ❓ 常见问题
+在 GitHub Issues 页面提交问题：https://github.com/zlpu/zabbixwatch-demo/issues
 
-### 部署相关
-
-**Q: 无法连接 Zabbix 服务器？**
-
-A: 请检查以下几点：
-1. Zabbix URL 是否正确（不需要包含 `/api_jsonrpc.php`）
-2. Zabbix 用户名和密码是否正确
-3. 网络是否连通（可以在容器内 ping Zabbix 服务器）
-4. Zabbix API 版本是否兼容（支持 6.0+）
-
-
-
-### 功能相关
-
-**Q: AI 分析不可用？**
-
-A: 请检查：
-1. AI 模型是否配置
-2. API Key 是否正确
-3. 网络是否连通
-4. 查看后端日志确认错误信息
-
-**Q: 数据不刷新？**
-
-A: 可能的原因：
-1. Zabbix 连接断开
-2. 数据源配置错误
-3. 缓存问题（清除浏览器缓存）
-4. 后端服务异常（查看日志）
-
-<br>
-
-
-
-## 🤝 贡献
-
-欢迎报告问题或提出建议！
-
-
-### 报告问题
-
-在 [Issues](https://github.com/zlpu/zabbixwatch-demo/issues) 页面提交问题，请包含：
+提交问题时请包含：
 - 问题描述
 - 复现步骤
-- 系统环境
+- 系统环境（操作系统、Docker 版本等）
 - 错误日志
 
-<br>
+### 技术支持
+
+- 作者微信: pzl960504
+- Email: 2925006354@qq.com
 
 
 
-
-
-
-## 🙏 致谢
+## 致谢
 
 感谢以下开源项目：
 
@@ -705,8 +473,6 @@ A: 可能的原因：
 - [Vue.js](https://vuejs.org/) - 渐进式 JavaScript 框架
 - [Flask](https://flask.palletsprojects.com/) - Python Web 框架
 - [ECharts](https://echarts.apache.org/) - 数据可视化图表库
-- [Element Plus](https://element-plus.org/) - Vue 3 UI 组件库
-- [DataV](http://datav.jiaminghi.com/) - 大屏数据可视化组件
 
 <br>
 

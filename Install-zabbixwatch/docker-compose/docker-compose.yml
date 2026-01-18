@@ -72,8 +72,7 @@ services:
     networks:
       - zabbix-network
 
-  # MySQL 数据库服务 - 使用自定义数据库镜像
-  # 镜像已内置数据库、用户和配置，开箱即用
+  # MySQL 数据库服务
   mysql:
     image: registry.cn-chengdu.aliyuncs.com/pzl_devops/zabbixwatch-db:v3.0
     container_name: zabbixwatch-db
