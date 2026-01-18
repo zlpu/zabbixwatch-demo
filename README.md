@@ -101,8 +101,6 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 
 
 ## 使用教程
-
-
 #### 1. 首次登录
 
 访问地址: http://your-server:8088
@@ -201,12 +199,10 @@ AI 模型配置：
 4. 设置背景和样式
 5. 预览效果
 6. 保存大屏
-
 ![](项目介绍/images/page_bashboard_edit.png)
 ![](项目介绍/images/page_show.png)
 
 #### 8. 指标管理（v4 新增）
-
 操作路径：系统设置 → 指标管理
 
 功能说明：
@@ -224,11 +220,7 @@ AI 模型配置：
 - 定义首页大屏标题
 - 设置会话有效期
 - 配置数据存储时长
-
-
 ![](项目介绍/images/page_setings.png)
-
-
 
 ## 部署指南
 
@@ -248,41 +240,31 @@ AI 模型配置：
 ```bash
 # Linux 系统一键安装 Docker
 bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
-
 # 验证安装
 docker --version
 docker-compose --version
 ```
-
 Windows 系统请访问 Docker 官网下载 Docker Desktop：https://www.docker.com/products/docker-desktop
 
 #### 2. 下载项目文件
-
 ```bash
 # 从 GitHub 下载
 git clone https://github.com/zlpu/zabbixwatch-demo.git
-
 # 或从 Gitee 下载（国内推荐）
 git clone https://gitee.com/root-pu/zabbixwatch-demo.git
-
 # 进入项目目录
 cd zabbixwatch-demo/Install-zabbixwatch/docker-compose
 ```
-
-
 #### 3. 启动服务
 
 ```bash
 # 启动所有服务
 docker-compose up -d
-
 # 查看服务状态
 docker-compose ps
-
 # 查看启动日志
 docker-compose logs -f
 ```
-
 等待所有服务启动完成（约 1-2 分钟），看到类似以下输出表示成功：
 
 ```
@@ -291,7 +273,7 @@ zabbixwatch-backend  ... Up      5000/tcp
 zabbixwatch-mysql    ... Up      3306/tcp
 ```
 
-#### 5. 访问系统
+#### 4. 访问系统
 
 浏览器访问：http://your-server-ip:8088
 
@@ -299,7 +281,7 @@ zabbixwatch-mysql    ... Up      3306/tcp
 
 首次登录后请立即修改密码。
 
-#### 6. 配置 Zabbix 数据源
+#### 5. 配置 Zabbix 数据源
 
 登录后进入系统设置 → 数据源配置，添加您的 Zabbix 服务器信息。
 
@@ -312,19 +294,14 @@ zabbixwatch-mysql    ... Up      3306/tcp
 ```bash
 # 1. 进入项目目录
 cd zabbixwatch-demo/Install-zabbixwatch/docker-compose
-
 # 2. 拉取最新代码
 git pull
-
 # 3. 拉取最新镜像
 docker-compose pull
-
 # 4. 停止旧服务（不删除数据）
 docker-compose stop
-
 # 5. 启动新版本
 docker-compose up -d
-
 # 6. 查看更新日志
 docker-compose logs -f
 ```
@@ -338,13 +315,10 @@ docker-compose logs -f
 ```bash
 # 1. 进入项目目录
 cd zabbixwatch-demo/Install-zabbixwatch/docker-compose
-
 # 2. 停止并删除所有容器和数据
 docker-compose down -v
-
 # 3. 拉取最新代码
 git pull
-
 # 4. 启动新版本
 docker-compose up -d
 ```
@@ -356,8 +330,6 @@ docker-compose up -d
 ```bash
 # 检查服务状态
 docker-compose ps
-
-
 # 访问前端页面
 # 浏览器打开: http://your-server:8088
 ```
@@ -393,7 +365,6 @@ docker-compose stop
 docker-compose down
 ```
 
-
 ### 常见部署问题
 
 #### 问题 1：端口被占用
@@ -418,15 +389,13 @@ ports:
 ```bash
 # 查看详细日志
 docker compose logs -f
-
 ```
-
 
 #### 问题 3：进入监控大屏闪退
 
 解决方法：
-1、若重启了服务器，需重新初始化zabbix数据源
-2、长时间未操作系统，发生闪退现象，需要点击退出登录后重新登录
+- 若重启了服务器，需重新初始化zabbix数据源
+- 长时间未操作系统，发生闪退现象，需要点击退出登录后重新登录
 
 #### 问题 4：无法连接 Zabbix 服务器？
 
@@ -436,15 +405,12 @@ docker compose logs -f
 - 网络是否连通（可以在容器内 ping Zabbix 服务器）
 - Zabbix API 版本是否兼容（支持 5.0+）
 
-
 #### 问题 5：大屏卡顿？
 
 解决方法：
 - 使用性能更好的浏览器
 - 关闭不必要的浏览器插件
 - 尽量使用显卡性能稍微好点的电脑进行播放大屏
-
-
 
 ## 贡献与支持
 
@@ -463,8 +429,6 @@ docker compose logs -f
 - 作者微信: pzl960504
 - Email: 2925006354@qq.com
 
-
-
 ## 致谢
 
 感谢以下开源项目：
@@ -475,8 +439,6 @@ docker compose logs -f
 - [ECharts](https://echarts.apache.org/) - 数据可视化图表库
 
 <br>
-
-
 
 ## ⭐️ Star History
 
