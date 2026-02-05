@@ -242,6 +242,10 @@ AI 模型配置：
 - 支持告警语音播报，可设置声音属性
 <img width="1743" height="859" alt="语音播报" src="https://github.com/user-attachments/assets/48fd0a65-b1ab-4252-bdb4-6a8217200344" />
 
+#### 11. 主机配置管理
+- 可在zabbixwatch上管理被监控主机，包括添加、删除、编辑信息
+<img width="1833" height="896" alt="主机管理" src="https://github.com/user-attachments/assets/073e9b4c-80bd-4ef8-a5b9-06e2d37b14e4" />
+
 
 
 ## 部署指南
