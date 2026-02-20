@@ -3,9 +3,9 @@
 # ZabbixWatch
 Zabbix 可视化监控大屏系统
 
-实时监控 · 动态网络拓扑 · 主机配置管理 · 自定义大屏 · AI 智能分析
+实时监控 · 动态网络拓扑 · 主机配置管理 · ip扫描 · AI 智能分析
 
-zabbix零配置接入 · 开箱即用 · 5分钟快速部署
+zabbix零配置接入 · 开箱即用 · 5分钟快速部署 · 系统支持中英文语言
 
 </div>
 
@@ -32,6 +32,8 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 - 指标管理：自定义映射监控指标键值、过滤首页展示的主机
 - 主机配置管理：可在zabbixwatch上管理被监控主机，包括添加、删除、编辑信息
 - 告警语音播报：支持在系统页面中进行告警的语音播报（只要有告警就会播报，无论在任何页面）
+- 网络扫描：支持扫描多个网段ip存活状态
+- 多语言：系统支持中英文语言切换
 
 适用场景：IT 运维监控、数据中心可视化、多机房统一监控、运维大屏展示
 
@@ -48,9 +50,13 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 >v4及后续版本需要有偿提供，v3版免费不开源
 >>付费方式：https://item.taobao.com/item.htm?ft=t&id=1012720700836
 
-### v5 (2026-02-01) - 当前版本
+### v5.2.4 (2026-02-20) - 当前版本
 
-更新：
+新功能：
+- 网络扫描：支持扫描多个网段ip存活状态
+- 多语言：系统支持中英文语言切换
+
+### v5.2.4 (2026-02) 
 
 - 主机配置管理：可在zabbixwatch上管理被监控主机，包括添加、删除、编辑信息
 - 告警语音播报：支持在系统页面中进行告警的语音播报（只要有告警就会播报，无论在任何页面）
@@ -153,6 +159,10 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/93124af8-bcb2-421b-8d21-f81446923899" />
 
+支持英文：
+<img width="1845" height="887" alt="image" src="https://github.com/user-attachments/assets/d8f36c70-e8cc-4716-a024-b41688d5ca22" />
+
+
 #### 4. 查看历史数据
 
 操作路径：左侧菜单 → 历史数据
@@ -188,7 +198,7 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 ![](项目介绍/images/page_alert_rules.png)
 
 消息配置：
-- 支持微信、飞书、钉钉
+- 支持微信、飞书、钉钉、邮件
 - 自定义消息模板
 
 ![](项目介绍/images/page_alert_msg.png)
@@ -245,6 +255,10 @@ AI 模型配置：
 #### 11. 主机配置管理
 - 可在zabbixwatch上管理被监控主机，包括添加、删除、编辑信息
 <img width="1833" height="896" alt="主机管理" src="https://github.com/user-attachments/assets/073e9b4c-80bd-4ef8-a5b9-06e2d37b14e4" />
+
+#### 12. 网络扫描
+- 定义多个局域网网段，扫描网络ip存活状态
+<img width="1838" height="880" alt="image" src="https://github.com/user-attachments/assets/22d19e6a-ebc2-4d27-8b8c-de7bed6b157c" />
 
 
 
