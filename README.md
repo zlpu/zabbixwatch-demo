@@ -56,7 +56,7 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 - 网络扫描：支持扫描多个网段ip存活状态
 - 多语言：系统支持中英文语言切换
 
-### v5.2.4 (2026-02) 
+### v5 (2026-02) 
 
 - 主机配置管理：可在zabbixwatch上管理被监控主机，包括添加、删除、编辑信息
 - 告警语音播报：支持在系统页面中进行告警的语音播报（只要有告警就会播报，无论在任何页面）
@@ -121,7 +121,7 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 #### 1. 首次登录
 
 访问地址: http://your-server:8088
-默认账号: admin / admin123
+默认账号: Admin / watch
 
 注意：首次登录后请立即修改密码
 
@@ -158,6 +158,7 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 功能: 自定义网络拓扑图-关联主机实时数据
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/93124af8-bcb2-421b-8d21-f81446923899" />
+<img width="1846" height="890" alt="image" src="https://github.com/user-attachments/assets/7d2633a0-b6da-4944-bd57-3d0c42fb9d0d" />
 
 支持英文：
 <img width="1845" height="887" alt="image" src="https://github.com/user-attachments/assets/d8f36c70-e8cc-4716-a024-b41688d5ca22" />
@@ -224,7 +225,7 @@ AI 模型配置：
 ![](项目介绍/images/page_show.png)
 
 #### 8. 指标管理（v4 新增）
-操作路径：系统设置 → 指标管理
+操作路径：系统设置 → 指标管理(主机过滤)
 
 功能说明：
 - 监控指标键值映射管理
@@ -262,7 +263,7 @@ AI 模型配置：
 
 
 
-## 部署指南
+## 部署教程
 
 ### 环境要求
 
