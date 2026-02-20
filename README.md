@@ -153,12 +153,13 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 - 地图告警展示
 
 ![](项目介绍/images/page_index.png)
+<img width="1846" height="890" alt="image" src="https://github.com/user-attachments/assets/7d2633a0-b6da-4944-bd57-3d0c42fb9d0d" />
 操作: 左侧菜单 → 监控大屏-网络拓扑图
 
 功能: 自定义网络拓扑图-关联主机实时数据
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/93124af8-bcb2-421b-8d21-f81446923899" />
-<img width="1846" height="890" alt="image" src="https://github.com/user-attachments/assets/7d2633a0-b6da-4944-bd57-3d0c42fb9d0d" />
+
 
 支持英文：
 <img width="1845" height="887" alt="image" src="https://github.com/user-attachments/assets/d8f36c70-e8cc-4716-a024-b41688d5ca22" />
