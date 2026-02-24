@@ -22,20 +22,21 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 核心功能：
 
 - 监控大屏：配置zabbix数据源后自动采集zabbix监控数据
-- 网络拓扑：用户可以根据自己的环境自定义网络拓扑，动态展示实时流量及主机数据
+- 网络拓扑：用户可以根据自己的环境自定义网络拓扑，动态展示实时流量及主机数据、支持导入导出
 - 历史数据：多维度展示主机历史数据
-- web监控：不依赖于zabbix，可对常用的网站进行状态码等指标的监控
+- web监控：不依赖于zabbix，监控可用性、状态码、响应时间、ssl证书到期时间、颁发机构等，支持导入导出
 - AI+告警：用户可自定义告警规则、设置告警消息接收方式（飞书、钉钉、企业微信、邮件）、设置AI大模型进行辅助告警分析
 - 报表统计：对告警信息进行统计
-- 大屏制作：用户可自定义监控大屏并制作轮播图
-- 系统设置：可自定义监控大屏的标题、会话有效期及数据存储时长
-- 指标管理：自定义映射监控指标键值、过滤首页展示的主机
-- 主机配置管理：可在zabbixwatch上管理被监控主机，包括添加、删除、编辑信息
-- 告警语音播报：支持在系统页面中进行告警的语音播报（只要有告警就会播报，无论在任何页面）
-- 网络扫描：支持扫描多个网段ip存活状态
+- 大屏制作：用户可自定义监控大屏并制作轮播图，支持导入导出
+- 系统设置：可自定义监控大屏的标题、系统名称、会话有效期及数据存储时长
+- 采集指标管理：自定义映射采集监控指标键值、过滤首页展示的主机
+- 配置管理：可在zabbixwatch上管理被监控主机，包括添加、删除、编辑信息
+- 告警语音播报：支持在系统页面中进行告警的语音播报
+- 网络扫描：支持扫描多个网段ip存活状态，支持导入导出
 - 多语言：系统支持中英文语言切换
 
 适用场景：IT 运维监控、数据中心可视化、多机房统一监控、运维大屏展示
+<img width="1179" height="695" alt="image" src="https://github.com/user-attachments/assets/fac89652-4967-4421-8761-0dd4fec10a2f" />
 
 ## 联系方式
 
@@ -50,11 +51,13 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 >v4及后续版本需要有偿提供，v3版免费不开源
 >>付费方式：https://item.taobao.com/item.htm?ft=t&id=1012720700836
 
-### v5.2.4 (2026-02-20) - 当前版本
+### v5.2.5 (2026-02-23) - 当前版本
 
 新功能：
 - 网络扫描：支持扫描多个网段ip存活状态
 - 多语言：系统支持中英文语言切换
+- 导入导出功能：网络拓扑、web监控站点、自定义看板、扫描网段
+- 优化首页展示的指标
 
 ### v5 (2026-02) 
 
@@ -124,8 +127,9 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 默认账号: Admin / watch
 
 注意：首次登录后请立即修改密码
+<img width="1905" height="981" alt="微信图片_20260224130719_263_199" src="https://github.com/user-attachments/assets/6b517833-9fec-442f-a0b1-06ab0bc49a11" />
 
-![](项目介绍/images/login.png)
+
 
 #### 2. 配置 Zabbix 数据源
 
@@ -152,11 +156,13 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 - 支持全屏展示（F11 全屏 / ESC 退出）
 - 地图告警展示
 
-![](项目介绍/images/page_index.png)
+<img width="1703" height="982" alt="微信图片_20260224130703_248_199" src="https://github.com/user-attachments/assets/2707ab20-19da-4f27-bec8-9b461402f0fa" />
+
 <img width="1846" height="890" alt="image" src="https://github.com/user-attachments/assets/7d2633a0-b6da-4944-bd57-3d0c42fb9d0d" />
 操作: 左侧菜单 → 监控大屏-网络拓扑图
 
 功能: 自定义网络拓扑图-关联主机实时数据
+<img width="1696" height="977" alt="微信图片_20260224130704_249_199" src="https://github.com/user-attachments/assets/bcfb1940-ed47-47ba-92dc-b1e30b0690af" />
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/93124af8-bcb2-421b-8d21-f81446923899" />
 
@@ -174,7 +180,7 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 - 多指标对比分析
 - 支持数据导出
 
-![](项目介绍/images/page_history1.png)
+<img width="1703" height="979" alt="微信图片_20260224130705_250_199" src="https://github.com/user-attachments/assets/4f415926-4cc9-45d7-a896-c5b1b20b00fc" />
 ![](项目介绍/images/page_history2.png)
 
 #### 5. Web 监控
@@ -185,8 +191,9 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 - 实时监控站点状态
 - 响应时间分析
 - 可用性统计
+<img width="1716" height="972" alt="微信图片_20260224130708_254_199" src="https://github.com/user-attachments/assets/df60c640-2715-4993-b2e0-8452651f9b2e" />
 
-![](项目介绍/images/page_web.png)
+
 
 #### 6. 配置告警规则和 AI 模型
 
@@ -196,20 +203,22 @@ ZabbixWatch 是一个基于 Zabbix 的可视化监控大屏系统，专为运维
 - 主机告警规则
 - Web 站点告警规则
 - 自定义告警阈值和时间窗口
+<img width="1719" height="967" alt="微信图片_20260224130710_256_199" src="https://github.com/user-attachments/assets/ef4c47cb-050b-491c-bf68-ec07b3778da3" />
 
-![](项目介绍/images/page_alert_rules.png)
 
 消息配置：
 - 支持微信、飞书、钉钉、邮件
 - 自定义消息模板
 
-![](项目介绍/images/page_alert_msg.png)
+<img width="1718" height="982" alt="微信图片_20260224130714_257_199" src="https://github.com/user-attachments/assets/13403600-665b-40b5-91be-60c6c972b2d0" />
+
 
 AI 模型配置：
 - 内置服务商：硅基流动、DeepSeek、OpenAI
 - 支持自定义模型 API 地址和 Key
 
-![](项目介绍/images/page_alert_ai.png)
+<img width="1718" height="980" alt="微信图片_20260224130714_258_199" src="https://github.com/user-attachments/assets/ef211158-da46-4b18-9dfe-568c37f25c24" />
+
 
 #### 7. 制作自定义大屏
 
@@ -244,7 +253,8 @@ AI 模型配置：
 - 设置会话有效期
 - 配置数据存储时长
 - 手动清理数据
-![](项目介绍/images/page_setings.png)
+<img width="1717" height="988" alt="微信图片_20260224130716_260_199" src="https://github.com/user-attachments/assets/65612fd2-c1c6-4b77-94c1-b1df6dc07eda" />
+
 
 #### 10. 语音播报
 
@@ -254,13 +264,17 @@ AI 模型配置：
 - 支持告警语音播报，可设置声音属性
 <img width="1743" height="859" alt="语音播报" src="https://github.com/user-attachments/assets/48fd0a65-b1ab-4252-bdb4-6a8217200344" />
 
-#### 11. 主机配置管理
-- 可在zabbixwatch上管理被监控主机，包括添加、删除、编辑信息
-<img width="1833" height="896" alt="主机管理" src="https://github.com/user-attachments/assets/073e9b4c-80bd-4ef8-a5b9-06e2d37b14e4" />
+#### 11. 配置管理
+- 可在zabbixwatch上管理被监控主机、监控项、触发器
+<img width="1711" height="974" alt="微信图片_20260224130705_251_199" src="https://github.com/user-attachments/assets/975cb648-445e-4b12-9468-2d68f13d64f9" />
+<img width="1720" height="977" alt="微信图片_20260224130706_252_199" src="https://github.com/user-attachments/assets/f051c537-3d1b-40a8-89b1-c88660ca4dfb" />
+<img width="1720" height="983" alt="微信图片_20260224130707_253_199" src="https://github.com/user-attachments/assets/afe08aff-b266-483d-90d2-22b4ef43244d" />
+
 
 #### 12. 网络扫描
 - 定义多个局域网网段，扫描网络ip存活状态
-<img width="1838" height="880" alt="image" src="https://github.com/user-attachments/assets/22d19e6a-ebc2-4d27-8b8c-de7bed6b157c" />
+<img width="1713" height="990" alt="微信图片_20260224130709_255_199" src="https://github.com/user-attachments/assets/3c978ca7-cd28-4ac0-8d8a-c4044c68f0be" />
+
 
 
 
@@ -272,6 +286,7 @@ AI 模型配置：
 - Docker Compose 1.29+
 - Zabbix Server 5.0+
 
+>v5.2.5以后需要使用docker host网络模式进行部署，需要使用宿主机8088、5000、80、3306端口，请避免冲突
 
 ### 一、新系统搭建
 
@@ -319,7 +334,7 @@ zabbixwatch-mysql    ... Up      3306/tcp
 
 浏览器访问：http://your-server-ip:8088
 
-默认账号：admin / admin123
+默认账号：Admin / watch
 
 首次登录后请立即修改密码。
 
