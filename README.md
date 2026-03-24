@@ -2,7 +2,7 @@
 
 # ITOps-Watch
 
-专为运维团队打造的企业级监控平台
+专为运维团队打造的监控平台
 
 > 本系统原名 ZabbixWatch，2026.3.23 正式更名为 ITOps-Watch
 
@@ -350,7 +350,7 @@ docker-compose logs -f
 
 ```
 itopswatch-web       ... Up      0.0.0.0:8088->80/tcp
-itopswatch-backend   ... Up      5000/tcp
+itopswatch-backend   ... Up      5001/tcp
 itopswatch-mysql     ... Up      3306/tcp
 ```
 
@@ -358,7 +358,7 @@ itopswatch-mysql     ... Up      3306/tcp
 
 浏览器访问：http://your-server-ip:8088
 
-默认账号：admin / admin123
+默认账号：Admin / watch
 
 首次登录后请立即修改密码。
 
@@ -455,93 +455,6 @@ docker-compose stop
 # 或者停止并删除容器但保留数据卷
 docker-compose down
 ```
-
-
-### 常见部署问题
-
-#### 问题 1：端口被占用
-
-错误信息：Bind for 0.0.0.0:8088 failed: port is already allocated
-
-解决方法：
-```bash
-# 查看端口占用
-netstat -tunlp | grep 8088
-
-# 修改 docker-compose.yml 中的端口
-ports:
-  - "8080:80"  # 改为其他未占用端口
-```
-
-#### 问题 2：容器启动失败
-
-错误信息：Container exited with code 1
-
-解决方法：
-```bash
-# 查看详细日志
-docker compose logs -f
-
-```
-
-#### 问题 3：进入监控大屏闪退
-
-解决方法：
-1、若重启了服务器，需重新初始化数据源
-2、长时间未操作系统，发生闪退现象，需要点击退出登录后重新登录
-
-#### 问题 4：无法连接数据源？
-
-**Zabbix** 检查以下几点：
-- Zabbix URL 是否正确（不需要包含 /api_jsonrpc.php）
-- Zabbix 用户名和密码是否正确
-- 网络是否连通（可以在容器内 ping Zabbix 服务器）
-- Zabbix API 版本是否兼容（支持 5.0+）
-
-**Prometheus** 检查以下几点：
-- Prometheus URL 是否正确（默认端口 9090）
-- 网络是否连通
-- 认证信息是否正确（如已启用认证）
-
-#### 问题 5：大屏卡顿？
-
-解决方法：
-- 使用性能更好的浏览器
-- 关闭不必要的浏览器插件
-- 尽量使用显卡性能稍微好点的电脑进行播放大屏
-
-
-
-## 贡献与支持
-
-### 问题反馈
-
-在 GitHub Issues 页面提交问题：https://github.com/zlpu/ITOps-Watch-demo/issues
-
-提交问题时请包含：
-- 问题描述
-- 复现步骤
-- 系统环境（操作系统、Docker 版本等）
-- 错误日志
-
-### 技术支持
-
-- 作者微信: pzl960504
-- Email: 2925006354@qq.com
-
-
-
-## 致谢
-
-感谢以下开源项目：
-
-- [Zabbix](https://www.zabbix.com/) - 企业级监控解决方案
-- [Prometheus](https://prometheus.io/) - 开源监控告警系统
-- [Vue.js](https://vuejs.org/) - 渐进式 JavaScript 框架
-- [Flask](https://flask.palletsprojects.com/) - Python Web 框架
-- [ECharts](https://echarts.apache.org/) - 数据可视化图表库
-
-<br>
 
 
 
