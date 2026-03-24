@@ -16,7 +16,7 @@ Zabbix & Prometheus 双数据源 · 可视化大屏 · AI 智能巡检 · AI 智
 
 ## 项目简介
 
-ITOps-Watch 是一款专为运维团队打造的企业级监控平台，支持 **Zabbix 与 Prometheus 双数据源**接入，提供自动采集指标、可视化大屏、AI+智能巡检、AI+智能告警、自定义大屏、动态网络拓扑等核心功能，实现智能运维一体化解决方案。
+ITOps-Watch 是一款专为运维团队打造的企业级监控平台，支持 **Zabbix 与 Prometheus 数据源**接入，提供自动采集指标、可视化大屏、AI+智能巡检、AI+智能告警、自定义大屏、动态网络拓扑等核心功能，实现智能运维一体化解决方案。
 
 官网：https://itops-watch.data-demo.cn
 
@@ -366,68 +366,8 @@ itopswatch-mysql     ... Up      3306/tcp
 
 登录后进入系统设置 → 数据源配置，添加您的 Zabbix 或 Prometheus 服务器信息。
 
-### 二、版本更新
 
-#### 方式一：保留数据更新（推荐）
-
-适用于需要保留历史数据和配置的场景。
-
-```bash
-# 1. 进入项目目录
-cd ITOps-Watch-demo/Install-ITOps-Watch/docker-compose
-
-# 2. 拉取最新代码
-git pull
-
-# 3. 拉取最新镜像
-docker-compose pull
-
-# 4. 停止旧服务（不删除数据）
-docker-compose stop
-
-# 5. 启动新版本
-docker-compose up -d
-
-# 6. 查看更新日志
-docker-compose logs -f
-```
-
-数据库和配置文件会自动保留，无需重新配置。
-
-#### 方式二：全新安装更新
-
-适用于需要清空所有数据重新开始的场景。
-
-```bash
-# 1. 进入项目目录
-cd ITOps-Watch-demo/Install-ITOps-Watch/docker-compose
-
-# 2. 停止并删除所有容器和数据
-docker-compose down -v
-
-# 3. 拉取最新代码
-git pull
-
-# 4. 启动新版本
-docker-compose up -d
-```
-
-注意：此方式会删除所有数据，包括用户配置、大屏配置、告警规则等。
-
-#### 更新后验证
-
-```bash
-# 检查服务状态
-docker-compose ps
-
-
-# 访问前端页面
-# 浏览器打开: http://your-server:8088
-```
-
-建议更新后清除浏览器缓存，避免前端资源缓存导致的问题。
-
-### 三、系统卸载
+### 二、系统卸载
 
 #### 完全卸载（删除所有数据）
 
